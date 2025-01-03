@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="WRAPPER_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="WRAPPER_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="23,432.333 ns"></ZoomStartTime>
+      <ZoomEndTime time="23,648.534 ns"></ZoomEndTime>
+      <Cursor1Time time="23,425.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="167"></NameColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/WRAPPER_TB/TB_clk" type="logic">
+      <obj_property name="ElementShortName">TB_clk</obj_property>
+      <obj_property name="ObjectShortName">TB_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/TB_SWITCHES" type="array">
+      <obj_property name="ElementShortName">TB_SWITCHES[15:0]</obj_property>
+      <obj_property name="ObjectShortName">TB_SWITCHES[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/prog_count/PC_count" type="array">
+      <obj_property name="ElementShortName">PC_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider142">
+      <obj_property name="label">RA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/regfile/register[1]" type="array">
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider141">
+      <obj_property name="label">SP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/regfile/register[2]" type="array">
+      <obj_property name="ElementShortName">[2][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider139">
+      <obj_property name="label">t4</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/regfile/register[29]" type="array">
+      <obj_property name="ElementShortName">[29][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[29][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider140">
+      <obj_property name="label">t5</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/regfile/register[30]" type="array">
+      <obj_property name="ElementShortName">[30][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[30][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/alu/alu_result" type="array">
+      <obj_property name="ElementShortName">alu_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/mem/MEM_DOUT1" type="array">
+      <obj_property name="ElementShortName">MEM_DOUT1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_DOUT1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/mem/MEM_DOUT2" type="array">
+      <obj_property name="ElementShortName">MEM_DOUT2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_DOUT2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/decoder/RF_SEL" type="array">
+      <obj_property name="ElementShortName">RF_SEL[1:0]</obj_property>
+      <obj_property name="ObjectShortName">RF_SEL[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/decoder/PC_SEL" type="array">
+      <obj_property name="ElementShortName">PC_SEL[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_SEL[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/decoder/srcB_SEL" type="array">
+      <obj_property name="ElementShortName">srcB_SEL[2:0]</obj_property>
+      <obj_property name="ObjectShortName">srcB_SEL[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/decoder/srcA_SEL" type="array">
+      <obj_property name="ElementShortName">srcA_SEL[1:0]</obj_property>
+      <obj_property name="ObjectShortName">srcA_SEL[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/decoder/ALU_FUN" type="array">
+      <obj_property name="ElementShortName">ALU_FUN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_FUN[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/rs1" type="array">
+      <obj_property name="ElementShortName">rs1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/rs2" type="array">
+      <obj_property name="ElementShortName">rs2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/fsm/PS" type="array">
+      <obj_property name="ElementShortName">PS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/WRAPPER_TB/UUT/CPU/regfile/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+</wave_config>

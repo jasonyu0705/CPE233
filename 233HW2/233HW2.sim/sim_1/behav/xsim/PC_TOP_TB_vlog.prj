@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../233HW2.srcs/sources_1/new/MUX.sv" \
+"../../../../233HW2.srcs/sources_1/new/PC.sv" \
+"../../../../233HW2.srcs/sources_1/new/PC_TOP.sv" \
+"../../../../233HW2.srcs/sources_1/new/PlusFour.sv" \
+"../../../../233HW2.srcs/sim_1/new/PC_TOP_TB.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

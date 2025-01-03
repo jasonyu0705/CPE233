@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Oct 27 01:44:32 2024
+# Process ID: 3740
+# Current directory: C:/Users/jason/233_hw5/233_hw5.runs/synth_1
+# Command line: vivado.exe -log BCG.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BCG.tcl
+# Log file: C:/Users/jason/233_hw5/233_hw5.runs/synth_1/BCG.vds
+# Journal file: C:/Users/jason/233_hw5/233_hw5.runs/synth_1\vivado.jou
+# Running On: LAPTOP-54I6DIBE, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source BCG.tcl -notrace

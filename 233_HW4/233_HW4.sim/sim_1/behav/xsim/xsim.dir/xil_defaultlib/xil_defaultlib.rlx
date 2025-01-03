@@ -1,0 +1,9 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/Users/jason/233_HW4/233_HW4.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/jason/233_HW4/233_HW4.srcs/sim_1/new/ALU_TB.sv,1729559397,systemVerilog,,,,ALU_TB,,uvm,,,,,,
+C:/Users/jason/233_HW4/233_HW4.srcs/sim_1/new/IMMED_GEN_TB.sv,1729661982,systemVerilog,,,,IMMED_GEN_TB,,uvm,,,,,,
+C:/Users/jason/233_HW4/233_HW4.srcs/sources_1/new/ALU.sv,1729557629,systemVerilog,,C:/Users/jason/233_HW4/233_HW4.srcs/sim_1/new/ALU_TB.sv,,ALU,,uvm,,,,,,
+C:/Users/jason/233_HW4/233_HW4.srcs/sources_1/new/IMMED_GEN.sv,1729803342,systemVerilog,,C:/Users/jason/233_HW4/233_HW4.srcs/sim_1/new/IMMED_GEN_TB.sv,,IMMED_GEN,,uvm,,,,,,

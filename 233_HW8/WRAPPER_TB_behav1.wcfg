@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="OTTER_TOP_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="OTTER_TOP_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="715.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="797.301 ns"></ZoomEndTime>
+      <Cursor1Time time="359.100 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="145"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/OTTER_TOP_TB/RST_TB" type="logic">
+      <obj_property name="ElementShortName">RST_TB</obj_property>
+      <obj_property name="ObjectShortName">RST_TB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OTTER_TOP_TB/INTR_TB" type="logic">
+      <obj_property name="ElementShortName">INTR_TB</obj_property>
+      <obj_property name="ObjectShortName">INTR_TB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OTTER_TOP_TB/CLK_TB" type="logic">
+      <obj_property name="ElementShortName">CLK_TB</obj_property>
+      <obj_property name="ObjectShortName">CLK_TB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OTTER_TOP_TB/UUT/fsm/PS" type="array">
+      <obj_property name="ElementShortName">PS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OTTER_TOP_TB/UUT/prog_count/PC_count" type="array">
+      <obj_property name="ElementShortName">PC_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OTTER_TOP_TB/UUT/mem/MEM_DOUT1" type="array">
+      <obj_property name="ElementShortName">MEM_DOUT1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_DOUT1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OTTER_TOP_TB/UUT/csr/mstatus_3" type="logic">
+      <obj_property name="ElementShortName">mstatus_3</obj_property>
+      <obj_property name="ObjectShortName">mstatus_3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OTTER_TOP_TB/UUT/csr/mepc" type="array">
+      <obj_property name="ElementShortName">mepc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mepc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OTTER_TOP_TB/UUT/csr/mtvec" type="array">
+      <obj_property name="ElementShortName">mtvec[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mtvec[31:0]</obj_property>
+   </wvobject>
+</wave_config>

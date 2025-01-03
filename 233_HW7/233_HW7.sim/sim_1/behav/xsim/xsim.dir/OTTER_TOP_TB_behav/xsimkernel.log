@@ -1,0 +1,7 @@
+Running: xsim.dir/OTTER_TOP_TB_behav/xsimk.exe -simmode gui -wdb OTTER_TOP_TB_behav.wdb -simrunnum 0 -socket 53640
+Design successfully loaded
+Design Loading Memory Usage: 8100 KB (Peak: 8100 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 9848 KB (Peak: 9848 KB)
+Simulation CPU Usage: 46 ms

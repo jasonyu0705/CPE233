@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Dec  6 00:38:30 2024
+# Process ID: 320
+# Current directory: C:/Users/jason/233_HW7 - Copy/233_HW8.runs/synth_1
+# Command line: vivado.exe -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
+# Log file: C:/Users/jason/233_HW7 - Copy/233_HW8.runs/synth_1/OTTER_Wrapper.vds
+# Journal file: C:/Users/jason/233_HW7 - Copy/233_HW8.runs/synth_1\vivado.jou
+# Running On: LAPTOP-54I6DIBE, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source OTTER_Wrapper.tcl -notrace

@@ -1,0 +1,144 @@
+# This program will fill the screen with color that changes at every pixel
+# Top left corner will be black RGB 12'h000 and increase with each pixel
+# in the row. At the end of a row, it will go to next row down and 
+# continue the color increasing. If the color overflows (goes beyond
+# white (12'hFFF) it will go back to black and increase again
+#
+# coordinates are given in row major format
+# (col,row) = (x,y)
+# Paul Hummel
+
+.eqv VG_ADDR, 0x11000120
+.eqv VG_COLOR, 0x11000140
+.eqv BG_COLOR, 0xF5F          #black
+.eqv COLUMNS 160
+.eqv ROWS 120
+
+
+#-------------------------------------------------------------------------------------------------------------------------------------
+#initializations, we must have this
+main:
+    li sp, 0x10000     #initialize stack pointer
+    li s2, VG_ADDR     #load MMIO addresses 
+    li s3, VG_COLOR    
+
+    li s0, COLUMNS
+    li s1, ROWS
+
+    li a0, 0		# X coordinate
+    li a1, 0		# Y coordinate
+    li a3, 0xf00   	# color red (RGB 12'hF00)
+    
+#-------------------------------------------------------------------------------------------------------------------------------------
+    
+#-------------------------------------------------------------------
+# Draw red border (RGB: 12'hF00)
+    li a3, 0xF00       # Red color
+    li a0, 0           # Start at x = 0
+    li a1, 0           # Start at y = 0
+    addi a2, s0,-1   # End at the last column (horizontal line)
+
+    # Top border
+    call draw_horizontal_line
+
+    # Bottom border
+    addi a1, s1,-1      # Move to the last row
+    call draw_horizontal_line
+
+    # Left border
+    li a0, 0           # X = 0
+    li a1, 0           # Reset Y to the top
+    addi a2, s1-1      # End at the bottom row
+    call draw_vertical_line
+
+    # Right border
+    addi a0, s0,-1   # Move to the last column
+    li a1, 0           # Reset Y to the top
+    addi a2, s1, -1      # End at the bottom row
+    call draw_vertical_line
+
+#-------------------------------------------------------------------
+# Draw green block in the top-left corner (RGB: 12'h0F0)
+    li a3, 0x0F0       # Green color
+    li a1, 200       # Start at row 0
+    li a0, 100           # Start at row 0
+    li t4, 10          # Block height (10 rows)
+    li a2, 10          # Block width (10 columns)
+    addi a2, a2, -1    # Convert to last column index
+    call draw_block    # Call the block drawing subroutine
+
+done:
+    j done             # Continuous loop
+
+#-------------------------------------------------------------------
+# Draws a vertical line from (a0, a1) to (a0, a2) using color in a3
+# Modifies: a1
+draw_vertical_line:
+    addi sp, sp, -4
+    sw ra, 0(sp)
+vertical_loop:
+    call draw_dot      # Must not modify a0, a3
+    addi a1, a1, 1
+    ble a1, a2, vertical_loop
+    lw ra, 0(sp)
+    addi sp, sp, 4
+    ret
+
+# draws a horizontal line from (a0,a1) to (a2,a1) using color in a3
+# Modifies (directly or indirectly): t0, t1, a0
+draw_horizontal_line:
+	addi sp,sp,-4
+	sw ra, 0(sp)
+draw_horiz1:
+	call draw_dot  # must not modify: a0, a1, a2, a3
+	addi a0,a0,1
+	ble a0,a2, draw_horiz1
+	lw ra, 0(sp)
+	addi sp,sp,4
+	ret
+
+
+
+# Draws a block starting at (a0, a1) with a width of (a2) columns and height of (t4) rows
+# Color is in a3
+# Modifies: a0, a1, t0, t1
+draw_block:
+    addi sp, sp, -4
+    sw ra, 0(sp)
+
+    # Save the starting X and Y coordinates
+    mv t0, a0        # Save starting X in t0
+    mv t1, a1        # Save starting Y in t1
+
+block_row_loop:
+    mv a0, t0        # Reset X to the starting column
+    call draw_horizontal_line
+    addi t1, t1, 1   # Move to the next row
+    addi a1, a1, 1   # Increment current row counter
+    bge a1, t4, end_block # Stop if the current row counter exceeds height
+
+    j block_row_loop # Continue to the next row
+
+end_block:
+    lw ra, 0(sp)
+    addi sp, sp, 4
+    ret
+
+
+# Fills the 60x80 grid with one color using successive calls to draw_horizontal_line
+# Modifies (directly or indirectly): t0, t1, t4, a0, a1, a2, a3
+
+
+
+# draws a dot on the display at the given coordinates:
+# 	(X,Y) = (a0,a1) with a color stored in a3
+# 	(col, row) = (a0,a1)
+# Modifies (directly or indirectly): t0, t1
+draw_dot:
+	andi t0,a0,0xFF	# select bottom 8 bits (col)
+	andi t1,a1,0x7F	# select bottom 7 bits  (row)
+	slli t1,t1,8	#  {a1[6:0],a0[7:0]} 
+	or t0,t1,t0	    # 15-bit address
+	sw t0, 0(s2)	# write 15 address bits to register
+	sw a3, 0(s3)	# write color data to frame buffer
+	ret

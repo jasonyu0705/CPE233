@@ -1,0 +1,9 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/Users/jason/233_hw5/233_hw5.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/jason/233_hw5/233_hw5.srcs/sim_1/new/BAG_TB.sv,1730150768,systemVerilog,,,,BAG_TB,,uvm,,,,,,
+C:/Users/jason/233_hw5/233_hw5.srcs/sim_1/new/BCG_TB.sv,1730066703,systemVerilog,,,,BCG_BCG,,uvm,,,,,,
+C:/Users/jason/233_hw5/233_hw5.srcs/sources_1/new/BAG.sv,1730017238,systemVerilog,,C:/Users/jason/233_hw5/233_hw5.srcs/sim_1/new/BAG_TB.sv,,BAG,,uvm,,,,,,
+C:/Users/jason/233_hw5/233_hw5.srcs/sources_1/new/BCG.sv,1730018663,systemVerilog,,C:/Users/jason/233_hw5/233_hw5.srcs/sim_1/new/BCG_TB.sv,,BCG,,uvm,,,,,,
